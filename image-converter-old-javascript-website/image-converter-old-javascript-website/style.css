@@ -1,0 +1,372 @@
+:root {
+    --text: rgb(22, 22, 22);
+    --background: rgb(245, 245, 245);
+    --card: rgb(210, 210, 210);
+    --input: rgb(220, 220, 220);
+    --accent: #26A69A;
+    --margin: 250px
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: 'Work Sans', sans-serif;
+    padding: 15px;
+    padding-top: 5px;
+    padding-right: 0px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Josefin Sans', 'Work Sans', sans-serif;
+}
+.selectBtn {
+    background-color: var(--card);
+    border-radius: 10px;
+    height: 5vh;
+    margin-right: 5px;
+}
+.textcenter {
+    color: var(--text);
+    display: block;
+    text-align: center;
+}
+
+.container {
+    background-color: var(--card);
+    padding: 3vw;
+    border-radius: 8px;
+flex: 1 0 330px;
+margin-bottom: 25px;
+}
+.fill {
+    width: -webkit-fill-available !important;
+    width: -moz-available !important;
+    margin-left: 0px;
+  }
+  .flexAdaptive > div{
+    margin-right: 15px;
+}
+
+.flexAdaptive {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.insideContainer {
+    background-color: var(--card);
+    border-radius: 8px;
+    padding: 2px;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+input {
+    margin-left: 15px;
+    width: 42%;
+    background-color: var(--input);
+    color: var(--text);
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+input[type=checkbox] {
+    width: auto;
+}
+
+select {
+    height: 25px;
+    padding-left: 2px;
+    padding-right: 4px;
+    border-radius: 8px;
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--input);
+    color: var(--text);
+}
+
+button, .themeChanger > div {
+    background-color: var(--input);
+    color: var(--text);
+    height: 50px;
+    width: 35%;
+    border-radius: 8px;
+    color: var(--text);
+    margin-right: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 0.9rem;
+    font-family: 'Work Sans', sans-serif;
+    border: 2px var(--input) solid;
+}
+.themeChanger > div {
+    margin-right: 10px;
+    flex: 1 0 150px;
+    width: 100% !important;
+    height: auto !important;
+    padding: 10px;
+}
+input[type=color] {
+    width: 65px;
+}
+.themeChanger {
+    display: flex;
+    overflow: auto;
+}
+a {
+    color: var(--accent)
+}
+
+@keyframes brightnessAnimation {
+    from {
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(130%);
+        -webkit-filter: brightness(130%);
+    }
+}
+
+@keyframes brightnessAnimationBack {
+    from {
+        filter: brightness(130%);
+        -webkit-filter: brightness(130%);
+    }
+
+    to {
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
+    }
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.hoverAnimate:hover {
+    animation-name: brightnessAnimation;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    filter: brightness(130%);
+}
+
+.hoverAnimateBack {
+    animation-name: brightnessAnimationBack;
+    animation-duration: 0.35s;
+    animation-iteration-count: 1;
+    filter: brightness(100%);
+}
+
+.accent, .btnSelected, .licenseSelected {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+progress {
+    width: 80%;
+    height: 15px;
+    border-radius: 8px;
+}
+
+::placeholder {
+    color: var(--text);
+    opacity: 1;
+}
+
+progress {
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 8px;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 8px;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 8px;
+}
+
+progress::-moz-progress-bar {
+    background: var(--accent);
+}
+
+progress::-webkit-progress-value {
+    background: var(--accent);
+}
+
+progress {
+    color: var(--accent);
+}
+
+.half {
+    width: 60%;
+    height: 20px;
+    border-radius: 8px;
+}
+
+dialog {
+    background-color: var(--card);
+    border-radius: 8px;
+    border-color: var(--text);
+    color: var(--text);
+    max-height: 80vh;
+    max-width: 80vw;
+    overflow-y: show;
+    position: fixed;
+    opacity: 0;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.link {
+    text-decoration: underline;
+}
+
+.link:hover {
+    cursor: pointer;
+}
+
+.buttonContainer {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text)
+}
+
+dialog {
+    top: 50%;
+    bottom: 50%;
+    text-overflow: clip;
+}
+
+.dialogInternal {
+    height: 50vh;
+    max-height: 50vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.right {
+    margin-right: 25px;
+    text-decoration: underline;
+}
+
+a:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.modechange {
+    float: right
+}
+
+.modechange:hover {
+    cursor: pointer
+}
+
+.dialogColor {
+    width: 15%;
+    background-color: var(--background);
+    border-radius: 8px;
+}
+/* Borrowed from W3Schools /*
+/* The switch - the box around the slider */
+.switch {
+    margin-left: 15px;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 20px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input[type=checkbox] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    padding-bottom: 5px;
+    padding-top: 5px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 8px !important;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 6px;
+    bottom: 4px;
+    background-color: var(--text);
+    -webkit-transition: .4s;
+    border-radius: 8px;
+    transition: .4s;
+  }
+  
+  input[type=range] {
+    accent-color: var(--accent);
+    padding: 0px;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 5px;
+    background: var(--accent);
+    background-size: var(--background-size, 0%) 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background: var(--accent);
+    border: solid var(--accent) 1px;
+    border-radius: 50%;
+    margin-top: -5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  input[type=checkbox]:checked+.slider {
+    background-color: var(--input);
+  }
+  
+  input[type=checkbox]:focus+.slider {
+    box-shadow: 0 0 1px var(--input);
+  }
+  
+  input[type=checkbox]:checked+.slider:before {
+    -webkit-transform: translateX(38px);
+    -ms-transform: translateX(38px);
+    transform: translateX(38px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
